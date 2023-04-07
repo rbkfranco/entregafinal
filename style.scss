@@ -208,14 +208,14 @@ footer {
 
 .contenedor {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(1fr, 1fr);
     grid-gap: 20px;
   }
   
   .gallery {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: auto 1fr;
+    grid-template-rows: 1fr 1fr;
     grid-gap: 20px;
   }
   
@@ -231,10 +231,15 @@ footer {
     justify-content: center;
     text-align: center;
     padding: 10px;
+    width: 450px;
+    height: 400px;
     background-color: #f9f9f9;
   }
+
+
   .iframe{
     margin-bottom: 100px;
+  
   }
 /* FORMS */
 $color-principal: #373F51;
