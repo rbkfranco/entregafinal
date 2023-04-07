@@ -1,5 +1,5 @@
-
-
+@import'./styles/bases/reset';
+@import'./styles/componentes/variables';
 @font-face {
     font-family: 'Helvetica Nue';
     src: url(../tipografias/Helvetica\ Neue\ UltraLight.ttf);
@@ -20,10 +20,6 @@
       justify-content: space-between;
       align-items: center;
       padding: 0;
-  
-      @media screen and (max-width: 768px) {
-        flex-direction: column;
-      }
     }
     
     li {
@@ -34,8 +30,12 @@
       text-align: center;
   
       @media screen and (max-width: 768px) {
+        font-family: 15px;
         font-size: 20px;
         margin: 10px 0;
+        flex-wrap: wrap;
+        flex-direction: column;
+        
       }
     }
     
@@ -82,6 +82,7 @@
   display: grid;
   justify-content: center;
   flex-wrap: wrap;
+  flex-direction: row;
 }
 
 .footer {
@@ -155,8 +156,13 @@ nav {
   border: 1px solid #373F51;
   flex-wrap: wrap;
   margin-bottom: 20px;
+@media (max-width:768px) {
+.img{ grid: .3fr;
 
+}  
 }
+}
+
 
 .texto {
   border: 1px solid #373F51;
@@ -166,6 +172,15 @@ nav {
   justify-content: flex-start;
   width: 400px;
   height: 400px;
+
+  @media(max-width:768px) {
+    .texto{font-size: 10px;
+    font-family: 'Helvetica Nue';
+  display: flex;
+  border: none;
+}
+    
+  }
 }
 
 .section {
@@ -208,8 +223,8 @@ footer {
 
 .contenedor {
     display: grid;
-    grid-template-columns: repeat(1fr, 1fr);
-    grid-gap: 20px;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 10px;
   }
   
   .gallery {
@@ -220,16 +235,23 @@ footer {
   }
   
   .gallery img {
+    grid-column: 1fr 1fr;
+    margin: 10px;
     width: 100%;
     height: 50%;
     object-fit: cover;
+    position: relative;
+    
   }
   
   .gallery-title {
     display: flex;
+  
     align-items: center;
     justify-content: center;
     text-align: center;
+    margin-bottom: 10px;
+    margin-top: 150px;
     padding: 10px;
     width: 450px;
     height: 400px;
@@ -237,9 +259,8 @@ footer {
   }
 
 
-  .iframe{
-    margin-bottom: 100px;
-  
+  .iframe{ margin-block-end: 100px;
+  margin-top: 10px;
   }
 /* FORMS */
 $color-principal: #373F51;
@@ -332,6 +353,22 @@ flex-wrap: nowrap wrap;}
       font-size: 30px;
     }
   }
-/* RESPONSIVE ABOUT */
 
-/* RESPONSIVE ACCOMMODATION */
+
+  /* RESPONSIVE */
+
+@media(max-width: 1025px){
+  .header-navbar{
+    font-family: 'Helvetica Nue';
+    font-size: 15px;
+    color: #1B1B1E;
+  }
+  .img{
+    width: auto;
+    height: auto;
+  }
+  .depoimentos{
+    font-size: 10px;
+    font-family: 'Helvetica Nue2';
+    color: $color-principal;
+  }}
